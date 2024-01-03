@@ -1,0 +1,31 @@
+from pages.base_page.base_page_locators import BasePageLocators
+from selenium.webdriver.common.by import By
+import constants
+
+class HomePageLocators(BasePageLocators):
+  COMPANY_NAME_LABEL_LOCATOR = (By.XPATH, '//span[text()="Fillout"]')
+  NEW_FORM_BUTTON_LOCATOR = (By.XPATH, '//button[@data-cy="create-new-flow-button"]')
+  ADD_COLLABORATOR_LOCATOR = (By.XPATH, '//span[text()="Add collaborator"]')
+  INVITE_COLLABORATORS_LABEL_IN_DIALOG_LOCATOR = (By.XPATH, '//div[text()="Invite collaborators"]')
+  EMAIL_ADDRESS_FIELD_IN_DIALOG_LOCATOR = (By.XPATH, '//div[text()="Enter email addresses"]')
+  EMAIL_ADDRESS_IN_INVITE_COLLABORATORS_FIELD_LOCATOR = (By.XPATH, f'//div[text()="{constants.COLLABORATOR_EMAIL}"]')
+  INVITATION_SENT_LABEL = (By.XPATH, '//div[text()="Invite sent"]')
+  CLOSE_INVITE_COLLABORATORS_DIALOG_LOCATOR = (By.XPATH, '//button[@data-cy="new-modal-close-button"]')
+  SEND_INVITES_BUTTON_LOCATOR = (By.XPATH, '//span[text()="Send invite"]')
+  ADD_WORKSPACE_LOCATOR = (By.XPATH, '//button[@data-cy="home-page-add-workspace-button"]')
+  HOME_WORKSPACE_LOCATOR = (By.XPATH, '//ul//a[@href="/home"]')
+  ACCOUNT_MENU_LOCATOR = (By.XPATH, '//div[@data-cy="home-page-account-menu"]')
+  SETTINGS_MENU_LOCATOR = (By.XPATH, '//a[@href="/home/settings"]')
+  LOGOUT_MENU_LOCATOR = (By.XPATH, '//div[text()="Logout"]')
+  BLANK_FORM_BUTTON_LOCATOR = (By.XPATH, '//div[text()="Blank form"]')
+  CREATE_FORM_BUTTON_LOCATOR = (By.XPATH, '//span[text()="Create form"]')
+  WORKSPACE_NAME_LOCATOR = (By.XPATH, '//input[@placeholder="e.g. Onboarding forms..."]')
+  CREATE_WORKSPACE_BUTTON_LOCATOR = (By.XPATH, '//span[text()="Create workspace"]')
+  NEW_WORKSPACE_NAVIGATION_LOCATOR = (By.XPATH, f'//a//div[text()="{constants.WORKSPACE_NAME}"]')
+  WORKSPACE_SETTINGS_LOCATOR = (By.XPATH, '//a[@data-cy="workspace-settings-dropdown-button"]')
+  NO_FORMS_CREATED_LABEL_LOCATOR = (By.XPATH, '//h2[contains(text(),"No")]')
+  DELETE_WORKSPACE_BUTTON_LOCATOR = (By.XPATH, '//span[text()="Delete workspace"]')
+  DELETE_WORKSPACE_POPUP_DIALOG_LABEL_LOCATOR = (By.XPATH, '//div[text()="Delete this workspace?"]')
+  DELETE_CONFIRM_CHECKBOX_LOCATOR = (By.XPATH, '//button[@data-cy="checkbox-component"]')
+  DELETE_WORKSPACE_BUTTON_IN_DIALOG_LOCATOR = (By.XPATH, '//div[contains(@id,"headlessui-dialog-panel")]//span[text()="Delete workspace"]//parent::button')
+  NEW_WORKSPACE_HEADER_LOCATED = (By.XPATH, f'//div[text()="{constants.WORKSPACE_NAME}" and @data-cy="home-page-header-workspace-name"]')
